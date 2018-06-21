@@ -47,14 +47,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-	// res.send('<h1>Hello Lance!</h1>')
-	// res.send({
-	// 	name: 'Lance',
-	// 	age: -2,
-	// 	cool: 'Yes'
-	// })
 	res.render('about.hbs',{
 		pageTitle: 'About Page',
+	});
+});
+
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		Message: "A page full of all my github projects",
+		pageTitle: 'Projects Page'
 	});
 });
 
